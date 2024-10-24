@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: ms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/XavierAlexisAriasHuapaya/ms-spring-boot-configserver.git
+          default-label: main
+          clone-on-start: true
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+server:
+  port: 7777
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -7,11 +7,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/XavierAlexisAriasHuapaya/ms-spring-boot-configserver.git
+          uri: https://github.com/XavierAlexisAriasHuapaya/ms-spring-boot-configs.git
           default-label: main
           clone-on-start: true
-          username: ${GIT_USERNAME}
-          password: ${GIT_PASSWORD}
+          # username: ${GIT_USERNAME}
+          # password: ${GIT_PASSWORD}
 server:
   port: 7777
 
